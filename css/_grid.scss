@@ -1,0 +1,63 @@
+/* ==============================
+   Edit the CSS below to create your grid.
+   ============================== */
+@supports (grid-area: auto){
+
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 25em;
+    grid-template-rows: 5em max-content 10em;
+    grid-template-areas:
+      "header header"
+      "article sidebar"
+      "footer footer";
+  }
+
+  header{ grid-area: header; }
+
+  article{ grid-area: article; }
+
+  sidebar{ grid-area: sidebar; }
+
+  footer{ grid-area: footer; }
+
+} /* end @supports
+
+
+
+
+
+/* ---------------------------
+   This uses Flexbox to center the content in the boxes. It also gives them a some styling. The CSS below is not required for the grid layout.
+*/
+
+header,article,sidebar,footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #333;
+/*   height: 10em;   */
+}
+
+header{
+   background-color: #cd6a51;
+}
+
+article{
+  background-color: #2D499A;
+}
+
+sidebar{
+  background-color: #A6D56A;
+}
+
+footer{
+  background-color: #cd6a51;
+}
+
+p{
+  color: #fff;
+  font-weight: 100;
+  font-size: 2em;
+  font-family: Helvetica Neue, Calibri, Arial, Open Sans, sans-serif;
+}
