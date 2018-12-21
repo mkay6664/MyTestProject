@@ -1,24 +1,827 @@
-body{
-    /* background-color: #eee; */
+/* 
+====================================
+Modified Normalize.css Code 
+
+This is a modified version of normalize.css
+It has been modified to remove some of the choices such as font-family, that a designer should make. Most of what is taken out is added in a separate starter stylesheet meant to be used in combination with this version of normalize.css
+====================================
+*/
+/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+/* Document
+   ========================================================================== */
+@import url("https://fonts.googleapis.com/css?family=Lato:700");
+@import url("https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700,700i");
+/* line 23, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+html {
+  /*  font-family: sans-serif;  1 */
+  /* Removed in order to allow designer to set the default fonts */
+  /*   line-height: 1.15;*/
+  /* 2 */
+  /* Removed in order to allow designer to set the default line-height */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 37, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 45, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* Removed in order to allow designer to set the default typography */
+/*
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+*/
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+/* line 78, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 88, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 97, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 108, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 121, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 131, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 141, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 151, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 160, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 170, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 181, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 189, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 198, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 207, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 215, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 219, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 230, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 239, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 248, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 256, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/*Removed to allow the designer to set the typography*/
+/*
+button,
+input,
+optgroup,
+select,
+textarea {
+*/
+/* font-family: sans-serif;*/
+/* 1 */
+/*  font-size: 100%;*/
+/* 1 */
+/*  line-height: 1.15;*/
+/* 1 */
+/*  margin: 0;*/
+/* 2 */
+/* }*/
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 288, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 298, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 309, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 320, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 332, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/*Removing opinionated styling*/
+/*
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+*/
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 360, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 374, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 383, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 392, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 402, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 412, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+/* line 421, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 431, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+/* line 444, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+/* line 453, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 464, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+/* line 472, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+/* line 483, C:/Users/mwkay/github/MyTestProject/scss/_normalized-reset.scss */
+[hidden] {
+  display: none;
+}
+
+/* Optional, include a web font  */
+/* The html and body selectors below set the base font for the entire page */
+/* line 6, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+html {
+  font-size: 1rem;
+}
+
+/* line 8, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+body {
+  font-family: 'Gentium Book Basic', serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* This adds space between paragraphs and list items
+   NOTE: most Navigations use list items so you will need to
+   explicity set the margins on those so this rule doesn't
+   mess up your navigation styling */
+/* line 20, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+p, li {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Base Styling for headings  */
+/* line 26, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: Lato, sans-serif;
+}
+
+/* For each of your headings at minimum set the margin, size, line-height. Adjust font-weight and other properties as needed. */
+/* line 33, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+h1 {
+  font-size: 5.063rem;
+  line-height: 1;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+
+/* line 40, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+h2 {
+  font-size: 2.5em;
+  line-height: 1.2;
+  margin: 1.5rem 0 0.5rem 0;
+  color: #FF4500;
+}
+
+/* line 47, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+h3 {
+  font-size: 2.25rem;
+  line-height: 1;
+  margin: 1.5rem 0 0.25rem 0;
+}
+
+/* line 53, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+h4 {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+/* line 59, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+h4.subheading {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1;
+  margin: .5rem 0 1.5rem 0;
+}
+
+/* line 66, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+h4.homesubheading {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin: .5rem 0 1.5rem 0;
+}
+
+/* line 74, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+h4.sitesubheader {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin: .5rem 0 1.5rem 0;
+  text-align: center;
+}
+
+/* line 83, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+h5 {
+  font-size: 1rem;
+  line-height: 1;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+/* line 90, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+h5.author {
+  font-size: 1.20rem;
+  line-height: 1;
+  margin: .25rem 0 0.25rem 0;
+}
+
+/* line 97, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+h5.caption {
+  font-size: 1rem;
+  line-height: 1;
+  margin: .25rem 0 1.25rem 0;
+}
+
+/* line 105, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 1rem 0 0 0;
+  font-weight: 400;
+  /* normal */
+  text-transform: uppercase;
+}
+
+/* line 113, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+p.quote {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 25px;
+  font-style: italic;
+}
+
+/* line 121, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
+.overview-text {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-family: Lato, sans-serif;
+}
+
+/* ============================
+* NAVIGATION
+* Modified from: http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/a-simple-responsive-mobile-first-navigation/
+* =============================*/
+/* Hide Main Nav to start if they use javascript. Will use JS to show if appropriate
+.js class is added through Modernizr */
+/* line 8, C:/Users/mwkay/github/MyTestProject/scss/_nav.scss */
+.js #main_nav {
+  clear: both;
+  display: none;
+  /*hidden to start */
+}
+
+/* line 14, C:/Users/mwkay/github/MyTestProject/scss/_nav.scss */
+#main_nav ul {
+  list-style: none;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 21, C:/Users/mwkay/github/MyTestProject/scss/_nav.scss */
+#main_nav li {
+  margin-bottom: 0;
+}
+
+/* line 25, C:/Users/mwkay/github/MyTestProject/scss/_nav.scss */
+#main_nav li a {
+  display: block;
+  color: #fff;
+  background-color: #555;
+  text-transform: uppercase;
+  padding: 0.625em;
+  /* 10px in ems is 10/16 */
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  font-weight: 900;
+}
+
+/* line 37, C:/Users/mwkay/github/MyTestProject/scss/_nav.scss */
+#main_nav li a:hover {
+  color: #555;
+  background-color: #fff;
+}
+
+/* line 42, C:/Users/mwkay/github/MyTestProject/scss/_nav.scss */
+#main_nav li a:active {
+  color: #555;
+  background-color: #f90;
+}
+
+/* menu button */
+/* line 48, C:/Users/mwkay/github/MyTestProject/scss/_nav.scss */
+.menu {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* line 53, C:/Users/mwkay/github/MyTestProject/scss/_nav.scss */
+.menu a {
+  padding: 0.5em 0.625em;
+  /*10/16 */
+  background-color: #555;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 61, C:/Users/mwkay/github/MyTestProject/scss/_nav.scss */
+.menu a:hover {
+  color: #555;
+  background-color: #f90;
+}
+
+/* ==========================
+*  Media Queries for Main Nav
+*  ========================== */
+/* these don't have to be separate. We did so for two reasons:
+1. Easy to copy and paste this into new design
+2. Depending on your site you may need separate break points for the nav. You may want to see what width is needed to fit your nav horizontally without breaking and use that as the breakpoint.
+It should also be noted that there is only one media query because this CSS moves the nav to the top where it can stay for all of the other sizes.
+*/
+/* 45em is about 720px depending on the base font-size */
+@media only screen and (min-width: 45em) {
+  /* hide the menu button */
+  /* line 80, C:/Users/mwkay/github/MyTestProject/scss/_nav.scss */
+  .menu {
+    display: none;
+  }
+  /* line 83, C:/Users/mwkay/github/MyTestProject/scss/_nav.scss */
+  #main_nav {
+    /* move main_nav to top of the screen */
+    /*         position: absolute;
+        top: 0;
+        left: 0; */
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    /* should be the same as #main_nav li a background color above */
+    background-color: #555;
+  }
+  /* line 94, C:/Users/mwkay/github/MyTestProject/scss/_nav.scss */
+  #main_nav li {
+    display: inline;
+    line-height: 1em;
+  }
+  /* line 98, C:/Users/mwkay/github/MyTestProject/scss/_nav.scss */
+  #main_nav li a {
+    float: left;
+    padding: 0.9375em;
+    /* 10/16  and  15/16 */
+    border-bottom: none;
+  }
+  /* line 104, C:/Users/mwkay/github/MyTestProject/scss/_nav.scss */
+  #main_nav li a.top {
+    display: none;
+  }
+  /* The following will move the nav to the top of the screens */
+  /* line 110, C:/Users/mwkay/github/MyTestProject/scss/_nav.scss */
+  #main_nav {
+    /* move main_nav to top of the screen */
+    /* position: absolute;
+        top: 0;
+        left: 0;  */
+  }
+  /* line 116, C:/Users/mwkay/github/MyTestProject/scss/_nav.scss */
+  .container {
+    /* move the rest of the page down accordingly. Need to add wrap element with .container class */
+    /* margin-top: 4em; */
+    /* adjust depending on the height of your nav */
+  }
+}
+
+/* end media query */
+/* line 7, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+body {
+  /* background-color: #eee; */
 }
 
 /*
 Base Responsive Styling
  */
- /*The following 7 lines are from Paul Irish and apply a border-box model.
+/*The following 7 lines are from Paul Irish and apply a border-box model.
  See this page for more info: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
- /* apply a natural box layout model to all elements, but allowing components to change */
- html {
-   box-sizing: border-box;
- }
- *, *:before, *:after {
-   box-sizing: inherit;
- }
+/* apply a natural box layout model to all elements, but allowing components to change */
+/* line 17, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+html {
+  box-sizing: border-box;
+}
 
- /* Basic Responsive Images and Video */
- img,video{
-   width: auto;
-   height: auto;
-   max-width: 100%;
+/* line 20, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
 
- }
+/* Basic Responsive Images and Video */
+/* line 26, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+img, video {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+/*Article styling*/
+/* line 37, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+.featured-image {
+  margin: 0 0 1em 0;
+}
+
+/* line 39, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+.featured-image figcaption {
+  font-style: italic;
+}
+
+/* line 45, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+.article-text {
+  max-width: 45em;
+}
+
+/* line 51, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+.p-opener {
+  font-weight: 700;
+  font-size: 1.20em;
+}
+
+/*# sourceMappingURL=../css/style.map */

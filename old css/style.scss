@@ -1,9 +1,3 @@
-@import "normalized-reset";
-@import "typography";
-@import "nav";
-
-
-
 body{
     /* background-color: #eee; */
 }
@@ -17,9 +11,8 @@ Base Responsive Styling
  html {
    box-sizing: border-box;
  }
-*,
-*:after,
-*:before {   box-sizing: inherit;
+ *, *:before, *:after {
+   box-sizing: inherit;
  }
 
  /* Basic Responsive Images and Video */
@@ -28,27 +21,3 @@ Base Responsive Styling
    height: auto;
    max-width: 100%;
  }
-
-
-
-
-/*Article styling*/
-
-.featured-image{
-  margin:0 0 1em 0;
-  figcaption{
-    font-style: italic;
-}
-
-}
-
-.article-text {
-  max-width: 45em;
-
-
-}
-
-.p-opener{
-  font-weight: 700;
-  font-size: 1.20em;
-}
