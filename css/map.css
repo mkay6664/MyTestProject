@@ -4,6 +4,6 @@
 /* Optional: Makes the sample page fill the window. */
 html, body {
   height: 100%;
-  margin: 0;
+  margin: .5em;
   padding: 0;
 }
