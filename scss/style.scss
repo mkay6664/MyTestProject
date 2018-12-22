@@ -1,54 +1,80 @@
 @import "normalized-reset";
 @import "typography";
 @import "nav";
+@import "grid";
 
-
-
-body{
-    /* background-color: #eee; */
+body {
+  /* background-color: #eee; */
 }
-
 /*
 Base Responsive Styling
  */
- /*The following 7 lines are from Paul Irish and apply a border-box model.
+/*The following 7 lines are from Paul Irish and apply a border-box model.
  See this page for more info: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
- /* apply a natural box layout model to all elements, but allowing components to change */
- html {
-   box-sizing: border-box;
- }
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
 *,
 *:after,
-*:before {   box-sizing: inherit;
- }
-
- /* Basic Responsive Images and Video */
- img,video{
-   width: auto;
-   height: auto;
-   max-width: 100%;
- }
-
-
-
-
+*:before {
+  box-sizing: inherit;
+}
+/* Basic Responsive Images and Video */
+img,
+video {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
 /*Article styling*/
+.featured-image {
+  margin: 0 0 1em
 
-.featured-image{
-  margin:0 0 1em 0;
-  figcaption{
+}
+
+  figcaption {
     font-style: italic;
-}
+  }
 
-}
 
 .article-text {
   max-width: 45em;
-
-
 }
 
-.p-opener{
+.p-opener {
   font-weight: 700;
   font-size: 1.20em;
+}
+
+
+/* Image Attribution */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+.img-container {
+  position: relative;
+  display: inline-block;
+}
+
+.img-attrib {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 .5em .5em 0;
+  padding: .25em;
+  color: white;
+  background-color: rgba(0,0,0,.2)
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+body {
+  padding: 1em;
 }

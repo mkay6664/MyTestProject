@@ -21,3 +21,37 @@ Base Responsive Styling
    height: auto;
    max-width: 100%;
  }
+
+
+/* Image Attribution */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+.img-container {
+  position: relative;
+  display: inline-block;
+}
+img {
+  width: 100%;
+  max-width: 400px;
+}
+.img-attrib {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 .5em .5em 0;
+  padding: .25em;
+  color: white;
+  background-color: rgba(0,0,0,.2)
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+body {
+  padding: 1em;
+}

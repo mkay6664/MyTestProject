@@ -5,24 +5,28 @@
 
   .grid{
     display: grid;
-    grid-template-columns: 1fr 25em;
-    grid-template-rows: 5em max-content 10em;
+    grid-template-columns: 25em 1fr;
+    grid-template-rows: 3em 3em 3em max-content 3em 3em 10em;
     grid-template-areas:
-      "header header"
-      "article sidebar"
+      "article-header article-header"
+      "article-author article-author"
+      "article-date article-date"
+      "article-summary article-sidebar"
+      "image-caption image-caption"
+      "story story"
       "footer footer";
   }
 
-  header{ grid-area: header; }
-
-  article{ grid-area: article; }
-
-  sidebar{ grid-area: sidebar; }
-
+  article-header{ grid-area: article-header; }
+  article-author{ grid-area: article-author; }
+  article-date{ grid-area: article-date; }
+  article-summary{ grid-area: article-summary; }
+  article-sidebar{ grid-area: article-sidebar; }
+  image-caption{ grid-area: image-caption; }
+  article-story{ grid-area: article-story; }
   footer{ grid-area: footer; }
 
 } /* end @supports
-
 
 
 
@@ -31,33 +35,16 @@
    This uses Flexbox to center the content in the boxes. It also gives them a some styling. The CSS below is not required for the grid layout.
 */
 
-header,article,sidebar,footer{
+article-header,article-author,article-date,article-summary,article-sidebar,image-caption,article-story,footer{
   display: flex;
-  justify-content: center;
   align-items: center;
-  border: 1px solid #333;
+
 /*   height: 10em;   */
 }
 
-header{
-   background-color: #cd6a51;
-}
+article-story{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-article{
-  background-color: #2D499A;
-}
-
-sidebar{
-  background-color: #A6D56A;
-}
-
-footer{
-  background-color: #cd6a51;
-}
-
-p{
-  color: #fff;
-  font-weight: 100;
-  font-size: 2em;
-  font-family: Helvetica Neue, Calibri, Arial, Open Sans, sans-serif;
 }

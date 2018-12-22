@@ -615,8 +615,8 @@ h5.caption {
 /* line 105, C:/Users/mwkay/github/MyTestProject/scss/_typography.scss */
 h6 {
   font-size: 1rem;
-  line-height: 1.5;
-  margin: 1rem 0 0 0;
+  line-height: 1;
+  margin: 0 0 0 0;
   font-weight: 400;
   /* normal */
   text-transform: uppercase;
@@ -771,7 +771,74 @@ It should also be noted that there is only one media query because this CSS move
 }
 
 /* end media query */
-/* line 7, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* ==============================
+   Edit the CSS below to create your grid.
+   ============================== */
+@supports (grid-area: auto) {
+  /* line 6, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+  .grid {
+    display: grid;
+    grid-template-columns: 25em 1fr;
+    grid-template-rows: 3em 3em 3em max-content 3em 3em 10em;
+    grid-template-areas: "article-header article-header" "article-author article-author" "article-date article-date" "article-summary article-sidebar" "image-caption image-caption" "story story" "footer footer";
+  }
+  /* line 20, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+  article-header {
+    grid-area: article-header;
+  }
+  /* line 21, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+  article-author {
+    grid-area: article-author;
+  }
+  /* line 22, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+  article-date {
+    grid-area: article-date;
+  }
+  /* line 23, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+  article-summary {
+    grid-area: article-summary;
+  }
+  /* line 24, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+  article-sidebar {
+    grid-area: article-sidebar;
+  }
+  /* line 25, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+  image-caption {
+    grid-area: image-caption;
+  }
+  /* line 26, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+  article-story {
+    grid-area: article-story;
+  }
+  /* line 27, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+  footer {
+    grid-area: footer;
+  }
+}
+
+/* end @supports
+
+
+
+
+/* ---------------------------
+   This uses Flexbox to center the content in the boxes. It also gives them a some styling. The CSS below is not required for the grid layout.
+*/
+/* line 38, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+article-header, article-author, article-date, article-summary, article-sidebar, image-caption, article-story, footer {
+  display: flex;
+  align-items: center;
+  /*   height: 10em;   */
+}
+
+/* line 45, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+article-story {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 6, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 body {
   /* background-color: #eee; */
 }
@@ -782,12 +849,12 @@ Base Responsive Styling
 /*The following 7 lines are from Paul Irish and apply a border-box model.
  See this page for more info: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 /* apply a natural box layout model to all elements, but allowing components to change */
-/* line 17, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 15, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 20, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 19, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 *,
 *:after,
 *:before {
@@ -795,33 +862,72 @@ html {
 }
 
 /* Basic Responsive Images and Video */
-/* line 26, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
-img, video {
+/* line 25, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+img,
+video {
   width: auto;
   height: auto;
   max-width: 100%;
 }
 
 /*Article styling*/
-/* line 37, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 32, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 .featured-image {
-  margin: 0 0 1em 0;
+  margin: 0 0 1em;
 }
 
-/* line 39, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
-.featured-image figcaption {
+/* line 37, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+figcaption {
   font-style: italic;
 }
 
-/* line 45, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 42, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 .article-text {
   max-width: 45em;
 }
 
-/* line 51, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 46, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 .p-opener {
   font-weight: 700;
   font-size: 1.20em;
+}
+
+/* Image Attribution */
+/* line 54, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* line 57, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+.img-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* line 62, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+.img-attrib {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 .5em .5em 0;
+  padding: .25em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 71, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 73, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 78, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+body {
+  padding: 1em;
 }
 
 /*# sourceMappingURL=../css/style.map */
