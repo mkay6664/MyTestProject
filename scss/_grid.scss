@@ -48,3 +48,62 @@ article-story{
   align-items: center;
 
 }
+
+/* Grid */
+img{
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Basic Nav styling */
+nav h1{
+  display:inline-block;
+}
+.topnav ul{
+  list-style-type:none;
+  margin:0 0 0 2em;
+  padding: 0;
+  display:inline-block;
+}
+.topnav ul li{
+  margin:0 1em 0 0;
+  padding: 0;
+  display: inline-block;
+}
+
+/* Basic Box Styling */
+.box{
+  border: 2px solid #333;
+  padding: .5em;
+}
+
+
+/* MEDIA QUERIES */
+/* Here is where you can add media queries to change the layout at different breakpoints.  */
+
+
+  .boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+/*   This rule only applies to screen sizes between 600 and 899 px wide. */
+  @media (min-width: 600px) {
+    .boxes {
+    /* add a line here to set the grid-template-columns. Use more columns than the 1fr in line 17 above */
+
+      grid-template-columns: 25em 1fr;
+
+    }
+  }
+
+/*   This rule only applies to screen sizes 900px and larger */
+/*   Copy what you did above for 600px and larger and change it so that it is for 900px and larger and uses a different number of columns */
+
+
+
+/*   IF you like you can add another media query for an even larger screen size (1200px or larger). Copy the one for 900px and modify as you see fit. */
+
+
+/* this ends @supports */
