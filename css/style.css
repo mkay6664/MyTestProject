@@ -774,45 +774,59 @@ It should also be noted that there is only one media query because this CSS move
 /* ==============================
    Edit the CSS below to create your grid.
    ============================== */
-@supports (grid-area: auto) {
-  /* line 6, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
-  .grid {
+@supports (grid-area: auto) { {
+    /* MEDIA QUERIES */
+    /* Here is where you can add media queries to change the layout at different breakpoints.  */
+    /*   This rule only applies to screen sizes between 600 and 899 px wide. */
+  }
+  /* line 11, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+  .boxes {
     display: grid;
-    grid-template-columns: 25em 1fr;
-    grid-template-rows: 3em 3em 3em max-content 3em 3em 10em;
-    grid-template-areas: "article-header article-header" "article-author article-author" "article-date article-date" "article-summary article-sidebar" "image-caption image-caption" "story story" "footer footer";
+    grid-template-columns: 1fr;
   }
-  /* line 20, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
-  article-header {
-    grid-area: article-header;
+  @media (min-width: 800px) {
+    /* line 18, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+    .grid {
+      display: grid;
+      grid-template-columns: 25em 1fr;
+      grid-template-areas: "article-header article-header" "article-author article-author" "article-date article-date" "article-summary article-sidebar" "image-caption image-caption" "empty article-story";
+    }
+    /* line 31, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+    .article-header {
+      grid-area: article-header;
+    }
+    /* line 32, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+    .article-author {
+      grid-area: article-author;
+    }
+    /* line 33, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+    .article-date {
+      grid-area: article-date;
+      margin-bottom: 2em;
+    }
+    /* line 34, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+    .article-summary {
+      grid-area: article-summary;
+    }
+    /* line 35, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+    .article-sidebar {
+      grid-area: article-sidebar;
+    }
+    /* line 36, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+    .image-caption {
+      grid-area: image-caption;
+    }
+    /* line 37, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+    .article-story {
+      grid-area: article-story;
+    }
   }
-  /* line 21, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
-  article-author {
-    grid-area: article-author;
-  }
-  /* line 22, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
-  article-date {
-    grid-area: article-date;
-  }
-  /* line 23, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
-  article-summary {
-    grid-area: article-summary;
-  }
-  /* line 24, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
-  article-sidebar {
-    grid-area: article-sidebar;
-  }
-  /* line 25, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
-  image-caption {
-    grid-area: image-caption;
-  }
-  /* line 26, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
-  article-story {
-    grid-area: article-story;
-  }
-  /* line 27, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
-  footer {
-    grid-area: footer;
+  @media (min-width: 1200px) {
+    /* line 42, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+    .grid {
+      grid-template-columns: 1fr 60em;
+      grid-template-areas: "article-header article-header" "article-author article-sidebar" "article-date article-sidebar" "article-summary article-sidebar" "empty article-story";
+    }
   }
 }
 
@@ -824,14 +838,14 @@ It should also be noted that there is only one media query because this CSS move
 /* ---------------------------
    This uses Flexbox to center the content in the boxes. It also gives them a some styling. The CSS below is not required for the grid layout.
 */
-/* line 38, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+/* line 63, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
 article-header, article-author, article-date, article-summary, article-sidebar, image-caption, article-story, footer {
   display: flex;
   align-items: center;
   /*   height: 10em;   */
 }
 
-/* line 45, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+/* line 70, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
 article-story {
   display: flex;
   justify-content: center;
@@ -839,7 +853,7 @@ article-story {
 }
 
 /* Grid */
-/* line 53, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+/* line 78, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
 img {
   width: auto;
   height: auto;
@@ -847,12 +861,12 @@ img {
 }
 
 /* Basic Nav styling */
-/* line 60, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+/* line 85, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
 nav h1 {
   display: inline-block;
 }
 
-/* line 63, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+/* line 88, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
 .topnav ul {
   list-style-type: none;
   margin: 0 0 0 2em;
@@ -860,35 +874,11 @@ nav h1 {
   display: inline-block;
 }
 
-/* line 69, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
+/* line 94, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
 .topnav ul li {
   margin: 0 1em 0 0;
   padding: 0;
   display: inline-block;
-}
-
-/* Basic Box Styling */
-/* line 76, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
-.box {
-  border: 2px solid #333;
-  padding: .5em;
-}
-
-/* MEDIA QUERIES */
-/* Here is where you can add media queries to change the layout at different breakpoints.  */
-/* line 86, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
-.boxes {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-/*   This rule only applies to screen sizes between 600 and 899 px wide. */
-@media (min-width: 600px) {
-  /* line 93, C:/Users/mwkay/github/MyTestProject/scss/_grid.scss */
-  .boxes {
-    /* add a line here to set the grid-template-columns. Use more columns than the 1fr in line 17 above */
-    grid-template-columns: 25em 1fr;
-  }
 }
 
 /*   This rule only applies to screen sizes 900px and larger */

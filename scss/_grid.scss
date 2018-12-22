@@ -3,28 +3,53 @@
    ============================== */
 @supports (grid-area: auto){
 
+
+  /* MEDIA QUERIES */
+  /* Here is where you can add media queries to change the layout at different breakpoints.  */
+
+
+    .boxes {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+  /*   This rule only applies to screen sizes between 600 and 899 px wide. */
+    @media (min-width: 800px) {
+        .grid{
+          display: grid;
+          grid-template-columns: 25em 1fr;
+          grid-template-areas:
+            "article-header article-header"
+            "article-author article-author"
+            "article-date article-date"
+            "article-summary article-sidebar"
+            "image-caption image-caption"
+            "empty article-story"
+
+        }
+
+        .article-header{ grid-area: article-header; }
+        .article-author{ grid-area: article-author; }
+        .article-date{ grid-area: article-date; margin-bottom: 2em}
+        .article-summary{ grid-area: article-summary; }
+        .article-sidebar{ grid-area: article-sidebar; }
+        .image-caption{ grid-area: image-caption; }
+        .article-story{ grid-area: article-story; }
+
+          }
+
+@media (min-width: 1200px) {
   .grid{
-    display: grid;
-    grid-template-columns: 25em 1fr;
-    grid-template-rows: 3em 3em 3em max-content 3em 3em 10em;
+    grid-template-columns: 1fr 60em;
     grid-template-areas:
       "article-header article-header"
-      "article-author article-author"
-      "article-date article-date"
+      "article-author article-sidebar"
+      "article-date article-sidebar"
       "article-summary article-sidebar"
-      "image-caption image-caption"
-      "story story"
-      "footer footer";
-  }
+      "empty article-story"
 
-  article-header{ grid-area: article-header; }
-  article-author{ grid-area: article-author; }
-  article-date{ grid-area: article-date; }
-  article-summary{ grid-area: article-summary; }
-  article-sidebar{ grid-area: article-sidebar; }
-  image-caption{ grid-area: image-caption; }
-  article-story{ grid-area: article-story; }
-  footer{ grid-area: footer; }
+}
+}
 
 } /* end @supports
 
@@ -72,31 +97,8 @@ nav h1{
   display: inline-block;
 }
 
-/* Basic Box Styling */
-.box{
-  border: 2px solid #333;
-  padding: .5em;
-}
 
 
-/* MEDIA QUERIES */
-/* Here is where you can add media queries to change the layout at different breakpoints.  */
-
-
-  .boxes {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-/*   This rule only applies to screen sizes between 600 and 899 px wide. */
-  @media (min-width: 600px) {
-    .boxes {
-    /* add a line here to set the grid-template-columns. Use more columns than the 1fr in line 17 above */
-
-      grid-template-columns: 25em 1fr;
-
-    }
-  }
 
 /*   This rule only applies to screen sizes 900px and larger */
 /*   Copy what you did above for 600px and larger and change it so that it is for 900px and larger and uses a different number of columns */
