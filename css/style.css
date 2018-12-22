@@ -885,7 +885,7 @@ nav h1 {
 /*   Copy what you did above for 600px and larger and change it so that it is for 900px and larger and uses a different number of columns */
 /*   IF you like you can add another media query for an even larger screen size (1200px or larger). Copy the one for 900px and modify as you see fit. */
 /* this ends @supports */
-/* line 6, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 8, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 body {
   /* background-color: #eee; */
 }
@@ -896,12 +896,12 @@ Base Responsive Styling
 /*The following 7 lines are from Paul Irish and apply a border-box model.
  See this page for more info: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 /* apply a natural box layout model to all elements, but allowing components to change */
-/* line 15, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 17, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 19, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 21, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 *,
 *:after,
 *:before {
@@ -909,7 +909,7 @@ html {
 }
 
 /* Basic Responsive Images and Video */
-/* line 25, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 27, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 img,
 video {
   width: auto;
@@ -918,40 +918,40 @@ video {
 }
 
 /*Article styling*/
-/* line 32, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 34, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 .featured-image {
   margin: 0 0 1em;
 }
 
-/* line 37, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 39, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 figcaption {
   font-style: italic;
 }
 
-/* line 42, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 44, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 .article-text {
   max-width: 45em;
 }
 
-/* line 46, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 48, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 .p-opener {
   font-weight: 700;
   font-size: 1.20em;
 }
 
 /* Image Attribution */
-/* line 54, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 56, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
-/* line 57, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 59, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 .img-container {
   position: relative;
   display: inline-block;
 }
 
-/* line 62, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 64, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 .img-attrib {
   position: absolute;
   bottom: 0;
@@ -962,17 +962,17 @@ figcaption {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* line 71, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 73, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 a {
   text-decoration: none;
 }
 
-/* line 73, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 75, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 78, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
+/* line 80, C:/Users/mwkay/github/MyTestProject/scss/style.scss */
 body {
   padding: 1em;
 }
