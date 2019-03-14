@@ -1,10 +1,10 @@
 var bibs = {
-    "Urbanspace Vanderbilt":{label:"Urbanspace", latLng: {lat:40.754758, lng: -73.976778}},
-    "Eataly Flatiron":{ label:"Gannat", latLng: {lat: 40.743067, lng: -73.986878}},
-    "Urbanspace at 570 Lex":{label:"Commentry", latLng: {lat:40.757987, lng: -73.970695}},
-    "Gansevoort Market":{label:"Commentry", latLng: {lat:40.741635, lng: -74.003657}},
-    "Chelsea Market":{label:"Commentry", latLng: {lat:40.742765, lng: -74.005414}},
-    "Urbanspace Garment District":{label:"Commentry", latLng: {lat:40.755290, lng: -73.985246}}
+    "Food Hall: Urbanspace Vanderbilt":{label:"Urbanspace", latLng: {lat:40.754758, lng: -73.976778}},
+    "Food Hall: Eataly Flatiron":{ label:"Gannat", latLng: {lat: 40.743067, lng: -73.986878}},
+    "Food Hall: Urbanspace at 570 Lex":{label:"Commentry", latLng: {lat:40.757987, lng: -73.970695}},
+    "Food Hall: Gansevoort Market":{label:"Commentry", latLng: {lat:40.741635, lng: -74.003657}},
+    "Food Hall: Chelsea Market":{label:"Commentry", latLng: {lat:40.742765, lng: -74.005414}},
+    "Food Hall: Urbanspace Garment District":{label:"Commentry", latLng: {lat:40.755290, lng: -73.985246}}
 
   };
 function initialize() {
